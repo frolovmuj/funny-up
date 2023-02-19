@@ -1,0 +1,11 @@
+.btn {
+    color: #fff;
+    background-color: $accent-color;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 29px;
+    transition: background-color .4s;
+    &:hover{
+        background-color: black;
+    }
+}

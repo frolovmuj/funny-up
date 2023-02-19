@@ -1,0 +1,56 @@
+.shake {
+   
+    -webkit-animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+    -moz-animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+    -o-animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+    animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+}
+@keyframes trambling-animation {
+   0%, 50%, 100% {
+     transform: rotate(0deg);
+     -webkit-transform: rotate(0deg);
+     -moz-transform: rotate(0deg);
+     -o-transform: rotate(0deg);
+     -ms-transform: rotate(0deg);
+   }
+   10%, 30% {
+     transform: rotate(-2deg);
+     -webkit-transform: rotate(-2deg);
+     -moz-transform: rotate(-2deg);
+     -o-transform: rotate(-2deg);
+     -ms-transform: rotate(-2deg);
+   }
+   20%, 40% {
+     transform: rotate(2deg);
+     -webkit-transform: rotate(2deg);
+     -moz-transform: rotate(2deg);
+     -o-transform: rotate(2deg);
+     -ms-transform: rotate(2deg);
+   }
+}
+
+
+
+
+.header-right__img {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake-img 7s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    position: relative;
+    z-index: -1;
+}
+
+@keyframes shake-img {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    10% { transform: translate(0px, 4px) rotate(0deg); }
+    20% { transform: translate(0px, 3px) rotate(0.5deg); }
+    30% { transform: translate(0px, 0px) rotate(-1deg); }
+    40% { transform: translate(0px, 5px) rotate(0deg); }
+    50% { transform: translate(0px, 0px) rotate(0deg); }
+    60% { transform: translate(0px, 6px) rotate(0deg); }
+    70% { transform: translate(0px, 0px) rotate(0deg); }
+    80% { transform: translate(0px, 6px) rotate(0deg); }
+    90% { transform: translate(0px, 0px) rotate(0deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+}

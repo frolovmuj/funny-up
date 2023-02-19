@@ -1,0 +1,35 @@
+.form {
+  display: flex;
+  width: 459px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 29px;
+  &:focus{
+    transform: scale(1.1);
+  }
+  .mail {
+    position: absolute;
+    top: 52%;
+    left: 32px;
+    transform: translateY(-50%);
+  }
+  .input {
+    color: #bbbbbb;
+    width: 100%;
+    position: relative;
+    display: block;
+    padding: 18px 62px 16px 72px;
+    border-radius: 29px;
+    transition: all 0.3s;
+    &:focus{
+      box-shadow: 0px 17px 42px rgba(0, 0, 0, 0.12);
+    }
+  }
+  .btn {
+    width: 157px;
+    position: absolute;
+    display: block;
+    height: 59px;
+    right: 0;
+  }
+}

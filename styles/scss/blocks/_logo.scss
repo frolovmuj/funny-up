@@ -1,0 +1,7 @@
+.logo{
+    display: block;
+    padding-top: 6px;
+    &:hover svg path fill{
+        color: red;
+    }
+}

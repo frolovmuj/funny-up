@@ -1,0 +1,115 @@
+.nav {
+  @media (max-width: 885px) {
+    .burger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px 0;
+      // .burger__line
+      &__line {
+        width: 50px;
+        height: 3px;
+        background-color: black;
+      }
+    }
+  }
+
+  // .nav__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 0;
+  }
+
+  // .nav__logo
+  &__logo {
+  }
+
+  //links active
+
+  // .nav__links
+  &__links {
+    .close-burger {
+      width: 1em;
+      height: 1em;
+      width: 35px;
+      height: 35px;
+      background-color: #fff;
+      clip-path: polygon(
+        20% 0%,
+        0% 20%,
+        30% 50%,
+        0% 80%,
+        20% 100%,
+        50% 70%,
+        80% 100%,
+        100% 80%,
+        70% 50%,
+        100% 20%,
+        80% 0%,
+        50% 30%
+      );
+    }
+
+    //nav__list
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 0 42px;
+      @media (max-width: 885px) {
+        transition: all .6s;
+        transform: translateX(-1000px);
+        position: absolute;
+        left: -1000px;
+        display: block;
+        transform: translateX(0px);
+        position: fixed;
+        top: 0;
+        width: 250px;
+        min-height: 120vh;
+        background: rgba(0, 0, 0, 0.867);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 22px 0;
+        text-align: center;
+        padding-top: 100px;
+        .nav-list__item {
+          font-size: 23px;
+        }
+        .nav-list__item:nth-child(1) {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+        }
+        .nav-list__item:not(.nav-list__item--active) a {
+          color: #fff;
+        }
+      }
+
+      // .nav-list__item
+      &__item {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        &--active a {
+          color: $accent-color;
+        }
+      }
+
+      // .nav-list__link
+      &__link {
+        color: $default-text-color;
+        transition: color 0.2s;
+        &:hover:not(.nav-list__item--active a) {
+          color: red;
+        }
+      }
+    }
+    .nav-list--active {
+      transform: translateX(0px);
+      left: 0;
+      top: 0;
+    }
+  }
+}
